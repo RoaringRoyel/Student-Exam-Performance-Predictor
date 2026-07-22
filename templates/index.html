@@ -1,3 +1,62 @@
-<h1>Welcome to the Flask App</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Exam Performance Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
 
-<p>This is a simple Flask application that serves as the homepage.</p>
+  <main class="sheet cover">
+    <div class="cover-header">
+      <div>
+        <span class="eyebrow">Diagnostic Booklet · Form MP-07</span>
+        <h1 class="title">Student Exam Performance Predictor</h1>
+        <p class="subtitle">
+          A short assessment that estimates a student's math score from their
+          reading and writing results, plus a few background details.
+        </p>
+      </div>
+      <div class="cover-stamp">DO NOT WRITE<br />ABOVE THIS LINE</div>
+    </div>
+
+    <div class="cover-fields">
+      <div>
+        <span class="field-label">Estimated time</span>
+        <span class="line" style="border:none; font-family: var(--font-mono); font-size: 0.85rem; padding-top:2px;">2 minutes</span>
+      </div>
+      <div>
+        <span class="field-label">Inputs required</span>
+        <span class="line" style="border:none; font-family: var(--font-mono); font-size: 0.85rem; padding-top:2px;">7 fields</span>
+      </div>
+      <div>
+        <span class="field-label">Output</span>
+        <span class="line" style="border:none; font-family: var(--font-mono); font-size: 0.85rem; padding-top:2px;">Predicted math score</span>
+      </div>
+    </div>
+
+    <div class="cover-body">
+      <p>
+        This tool uses a trained regression model to predict a student's math
+        score from demographic factors (gender, ethnicity group, parental
+        education, lunch type, test preparation) together with their reading
+        and writing scores.
+      </p>
+    </div>
+
+    <ul class="cover-list">
+      <li><span class="mark">›</span> Fill in the seven fields on the next page</li>
+      <li><span class="mark">›</span> Watch the live estimate gauge update as you go</li>
+      <li><span class="mark">›</span> Submit to get the model's graded prediction</li>
+    </ul>
+
+    <a class="btn-begin" href="{{ url_for('predict_datapoint') }}">
+      Begin assessment <span class="arrow">→</span>
+    </a>
+  </main>
+
+  <footer class="page-footer">Flask · scikit-learn · pandas — end-to-end ML pipeline</footer>
+
+</body>
+</html>
