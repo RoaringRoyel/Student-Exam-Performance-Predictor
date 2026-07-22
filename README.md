@@ -15,7 +15,7 @@ This project follows a modular ML pipeline structure:
 ## Screenshot
 
 <p align="center">
-  <img src="photo/ss.jpg" alt="App screenshot" width="700" />
+  <img src="photo/ss.png" alt="App screenshot" width="700" />
 </p>
 
 > Add a screenshot of the running app to a `photo/` folder at the project root, named `ss.jpg`, and it will render above.
